@@ -1,25 +1,32 @@
 ---
 
+import data from "../assets/data.json";
+
+const results = data?.results ?? [];
 ---
+<!-- Pengimportan data dengan perkiraan jika data tertentu hilang? tidak akan error -->
 
 <section
   class="result bg-linear-to-b from-(--Light-slate-blue) to-(--Light-royal-blue) text-center text-(--white) rounded-b-(--space-l) px-(--space-xl) sm:rounded-t-(--space-l) sm:w-[300px] lg:w-[340px] sm:relative sm:left-5"
 >
+{results.map((item) => (
+
   <p
     class="py-(--space-m) text-(--Light-lavender) text-(length:--step-3) font-bold sm:text-(length:--step-1)"
   >
-    Your Result
+    {item?.title ?? ""}
   </p>
   <div
     class="circle pb-(--space-l) bg-linear-to-b from-(--Violet-blue) to-(--Persian-blue) rounded-full mx-16 p-11 sm:mx-4 max-[321px]:mx-9 min-[425px]:mx-22 lg:mx-8 xl:mx-4"
   >
-    <p class="text-6xl font-bold">76</p>
-    <p class="text-(--Light-lavender)">of 100</p>
+    <p class="text-6xl font-bold">{item?.score ?? ""}</p>
+    <p class="text-(--Light-lavender)">of {item?.grade ?? ""}</p>
   </div>
   <p class="pb-(--space-2xs) text-(length:--step-3) font-bold pt-(--space-xs)">
-    Great
+    {item?.grading ?? ""}
   </p>
   <p class="pb-(--space-l) text-(--Light-lavender) sm:text-(length:--step-0)">
-    You scored higher than 65% of the people who have taken these test
+    {item?.desc ?? ""}
   </p>
+))}
 </section>
