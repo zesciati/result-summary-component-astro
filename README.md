@@ -15,6 +15,7 @@ Inside project, you'll see the following folders and files:
 │   └── favicon.svg
 └── src
     ├── assets
+    │   └── data.json
     ├── components
     │   ├── Results.astro
     │   └── Summary.astro
