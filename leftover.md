@@ -1,14 +1,7 @@
----
-import data from "../assets/data.json";
----
+# Summary.astro
 
-<aside
-  class="summary px-(--space-l) text-center sm:bg-(--white) sm:rounded-e-3xl sm:w-[320px] lg:w-[340px]"
->
-  <p class="font-bold py-(--space-s) text-left">Summary</p>
-
-  <div class="info-summary sm:py-6">
-    <!-- <div
+````
+<div
       class="flex justify-between bg-(--bg-red) px-(--space-s) py-(--space-xs) sm:py-(--space-2xs) rounded-lg"
     >
       <div class="flex">
@@ -70,36 +63,7 @@ import data from "../assets/data.json";
       <p class="font-bold text-(--Light-lavender) sm:text-(length:--step-0)">
         <span class="text-(--Dark-gray-blue)">73</span> / 100
       </p>
-    </div> -->
+    </div>
 
-    {
-      data.summary.map((item) => (
-        <div
-          class={`flex justify-between bg-(--${item.bgcolor}) px-(--space-s) py-(--space-xs) mt-(--space-xs) sm:py-(--space-2xs) rounded-lg`}
-        >
-          <div class="flex">
-            <img
-              src={`/images/icon-${item.icon}.svg`}
-              alt={`icon ${item.label}`}
-            />
-            <p
-              class={`ml-2  text-(--${item.color}) sm:text-(length:--step-0) sm:font-bold`}
-            >
-              {item.label}
-            </p>
-          </div>
-          <p class="font-bold text-(--Light-lavender) sm:text-(length:--step-0)">
-            <span class="text-(--Dark-gray-blue)">{item.score}</span> /{" "}
-            {item.scale}
-          </p>
-        </div>
-      ))
-    }
-  </div>
-
-  
-    <button
-      class="bg-(--Dark-gray-blue) text-(--white) w-full max-w-full rounded-4xl mt-(--space-s) py-(--space-xs) hover:bg-linear-to-b from-(--Light-slate-blue) to-(--Light-royal-blue) mb-(--space-l) sm:py-(--space-2xs) sm:mb-10 sm:mt-(--space-3xs)"
-      >{data.continue}</button
-    >
-</aside>
+   
+````

@@ -10,12 +10,39 @@
     }
   ],
 
-  "scale": "100",
   "continue": "Continue",
   "summary": [
-    { "label": "Reaction", "score": "80", "color": "red", "icon": "reaction" },
-    { "label": "Memory", "score": "92", "color": "yellow", "icon": "memory" },
-    { "label": "Verbal", "score": "61", "color": "green", "icon": "verbal" },
-    { "label": "Visual", "score": "73", "color": "blue", "icon": "visual" }
+    {
+      "label": "Reaction",
+      "score": "80",
+      "color": "Light-red",
+      "icon": "reaction",
+      "bgcolor": "bg-red",
+      "scale":"100"
+    },
+    {
+      "label": "Memory",
+      "score": "92",
+      "color": "Orangey-yellow",
+      "icon": "memory",
+      "bgcolor": "bg-yellow",
+      "scale":"100"
+    },
+    {
+      "label": "Verbal",
+      "score": "61",
+      "color": "Green-teal",
+      "icon": "verbal",
+      "bgcolor": "bg-green",
+      "scale":"100"
+    },
+    {
+      "label": "Visual",
+      "score": "73",
+      "color": "Cobalt-blue",
+      "icon": "visual",
+      "bgcolor": "bg-blue",
+      "scale":"100"
+    }
   ]
 }
